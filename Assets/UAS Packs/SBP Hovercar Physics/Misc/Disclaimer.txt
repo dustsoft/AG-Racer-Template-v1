@@ -1,0 +1,1 @@
+most of the assets in this "Misc" folder are made by Unity. I dont own some assets in this folder and it's subfolders. They include some particle systems, textures, and some shaders. They are used for demonstration purposes only. Thank you.
