@@ -610,6 +610,8 @@ public class ShipController : MonoBehaviour {
 
 				if (CurrentSpeed > 60f) {
 					foreach (ContactPoint cp in other.contacts) {
+						//Play Sound FX
+						//GetComponent<AudioSource>().Play(); ??
 
 						sparkObject.transform.position = cp.point;
 						sparkObject.transform.rotation = Quaternion.LookRotation (other.relativeVelocity.normalized, cp.normal);
