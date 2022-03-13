@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -53,10 +53,10 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 0
-    value: 0
+    value: 44
   tint:
     overrideState: 0
-    value: 0
+    value: 3
   colorFilter:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -64,17 +64,17 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   saturation:
-    overrideState: 1
-    value: 10
+    overrideState: 0
+    value: 19
   brightness:
     overrideState: 0
-    value: 0
+    value: -25
   postExposure:
     overrideState: 0
     value: 0
   contrast:
-    overrideState: 1
-    value: -5
+    overrideState: 0
+    value: 42
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1329,10 +1329,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 3
+    value: 7
   threshold:
     overrideState: 1
-    value: 0.7
+    value: 0.75
   softKnee:
     overrideState: 0
     value: 0.5
@@ -1341,16 +1341,16 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 5.98
+    value: 5
   anamorphicRatio:
     overrideState: 0
-    value: 0
+    value: -1
   color:
     overrideState: 0
     value: {r: 0.10403078, g: 0.031063516, b: 0.9407802, a: 1}
   fastMode:
     overrideState: 1
-    value: 1
+    value: 0
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
@@ -1386,13 +1386,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 150
+    value: 190
   sampleCount:
-    overrideState: 0
-    value: 10
+    overrideState: 1
+    value: 4
