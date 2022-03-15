@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/UAS Packs/SBP Hovercar Physics/Scenes/The_Playground_Desktop.unity
-    guid: d9e93c2b1e4d8bd47888c6be45cd9507
+    path: Assets/Scenes/City Nights (Track 01)/City Nights (Track 01) Scene.unity
+    guid: 7577deb5b438a496688a25a3f279314c
   m_configObjects: {}
