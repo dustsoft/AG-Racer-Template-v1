@@ -18,10 +18,6 @@ public class LapTimeManager : MonoBehaviour
     public GameObject MilliBox;
     public GameObject MilliXBox;
 
-
-
-
-
     // Update is called once per frame
     void Update()
     {

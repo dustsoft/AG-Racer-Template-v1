@@ -8,8 +8,15 @@ public class LapCompleteTrigger : MonoBehaviour
     public GameObject LapCompleteTrig;
     public GameObject HalfLapTrig;
 
-    private void OnTriggerEnter()
+    void OnTriggerEnter()
     {
-        
+        LapTimeManager.MinuteCount = 0;
+        LapTimeManager.SecondCount = 0;
+        LapTimeManager.MilliCount = 0;
+        LapTimeManager.MilliCountX = 0;
+
+        HalfLapTrig.SetActive(true);
+        LapCompleteTrig.SetActive(false);
+
     }
 }

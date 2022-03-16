@@ -11,8 +11,16 @@ public class ReSpawnTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //SceneManager.LoadScene("City Nights (Track 01) Scene");
+        LapTimeManager.MinuteCount = 0;
+        LapTimeManager.SecondCount = 0;
+        LapTimeManager.MilliCount = 0;
+        LapTimeManager.MilliCountX = 0;
 
-        player.transform.position = respawnPoint.transform.position;
+        //HalfLapTrig.SetActive(true);
+        //LapCompleteTrig.SetActive(false);
+
+        SceneManager.LoadScene("City Nights (Track 01) Scene");
+
+        //player.transform.position = respawnPoint.transform.position;
     }
 }
