@@ -15,7 +15,7 @@ public class Speedometer : MonoBehaviour
 
     private void Update()
     {
-        speed = target.velocity.magnitude * 3.6f * 1.09f;
+        speed = target.velocity.magnitude * 3.6f * 1.09f; // tweak speed here
 
         if (speedLabel != null)
             speedLabel.text = ((int)speed) + "";
