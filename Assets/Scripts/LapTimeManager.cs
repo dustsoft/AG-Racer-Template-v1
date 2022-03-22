@@ -18,12 +18,29 @@ public class LapTimeManager : MonoBehaviour
     public GameObject MilliBox;
     public GameObject MilliXBox;
 
+    
+
+    private Text MinuteBox_Text;
+    private Text MilliBox_Text;
+
+    public Text BestTimeTextBox;
+
+    public static float BestMinute = 999999f;
+
     // Update is called once per frame
+
+    //EDITED: unity calls this at the start of a scene
+    private void Start()
+    {
+        MinuteBox_Text = MinuteBox.GetComponent<Text>();
+        MilliBox_Text = MilliBox.GetComponent<Text>();
+    }
+
     void Update()
     {
         MilliCount += Time.deltaTime * 10;
         MilliDisplay = MilliCount.ToString("F0");
-        MinuteBox.GetComponent<Text>().text = "" + MilliDisplay;
+        MinuteBox_Text.text = "" + MilliDisplay;
 
         if (MilliCount >= 10)
         {
@@ -33,7 +50,7 @@ public class LapTimeManager : MonoBehaviour
 
         //I'm not sure what this does, found this code on YouTube
         MilliDisplay = Mathf.Floor(MilliCount).ToString("F0");
-        MilliBox.GetComponent<Text>().text = "" + MilliDisplay;
+        MilliBox_Text.text = "" + MilliDisplay;
 
         //X Display
         MilliCountX += Time.deltaTime * 100;
@@ -66,11 +83,16 @@ public class LapTimeManager : MonoBehaviour
 
         if (MinuteCount <= 9)
         {
-            MinuteBox.GetComponent<Text>().text = "0" + MinuteCount + "'";
+            MinuteBox_Text.text = "0" + MinuteCount + "'";
         }
         else
         {
-            MinuteBox.GetComponent<Text>().text = "" + MinuteCount + "'";
+            MinuteBox_Text.text = "" + MinuteCount + "'";
         }
+    }
+
+    public void UpdateBestTimeText(float Minute)
+    {
+        BestTimeTextBox.text = Minute.ToString() + "'00''00";
     }
 }
