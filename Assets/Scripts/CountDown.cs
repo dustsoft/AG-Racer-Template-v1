@@ -37,9 +37,9 @@ public class CountDown : MonoBehaviour
         countDown.SetActive(true);
 
         //Start Timer
-        Laptimer.SetActive (true);
+        Laptimer.SetActive (true); // set's laptimer UI to ACTIVE!
 
-        GO.SetActive (true);
+        GO.SetActive (true); //set's player ship object to ACTIVE!
 
         yield return new WaitForSeconds(1);
         countDown.SetActive(true);

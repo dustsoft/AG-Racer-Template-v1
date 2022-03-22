@@ -450,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189543518}
   m_Layer: 0
-  m_Name: Level ---------------------
+  m_Name: Level ----------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,8 +952,8 @@ Transform:
   m_Father: {fileID: 1007260557}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &425499154
-CapsuleCollider:
+--- !u!65 &425499154
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -962,10 +962,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1.9999999, z: 1.0000001}
+  m_Center: {x: -0.00000756979, y: 0, z: -0.00000008940696}
 --- !u!23 &425499155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1844,8 +1843,8 @@ Transform:
   m_Father: {fileID: 1007260557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &894848282
-CapsuleCollider:
+--- !u!65 &894848282
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1854,10 +1853,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1.9999999, z: 1.0000001}
+  m_Center: {x: -0.000045716763, y: 0.00000047683716, z: -0.00000008940696}
 --- !u!23 &894848283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3509,7 +3507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343860652}
   m_Layer: 0
-  m_Name: Game Play ----------------
+  m_Name: Game Play -----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3547,7 +3545,7 @@ GameObject:
   - component: {fileID: 1401344660}
   - component: {fileID: 1401344659}
   m_Layer: 5
-  m_Name: Ready Set Go!
+  m_Name: 3 2 1 Go! System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5191,6 +5189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3091800134980486765, guid: 26a81a0dc6962494f903fb2fa2b5bb29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3091800134980486765, guid: 26a81a0dc6962494f903fb2fa2b5bb29,
         type: 3}
