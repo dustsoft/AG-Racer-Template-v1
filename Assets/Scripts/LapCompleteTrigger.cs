@@ -13,53 +13,62 @@ public class LapCompleteTrigger : MonoBehaviour
     public GameObject MilliDisplay;
     public GameObject MilliXDisplay;
 
+    public float RawTime;
+
     void OnTriggerEnter()
     {
-        if (LapTimeManager.SecondCount <= 99)
+        RawTime = PlayerPrefs.GetFloat("RawTime");
+        if (LapTimeManager.RawTime <= RawTime)
         {
-            SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
-        }
-        else
-        {
-            SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
+            if (LapTimeManager.SecondCount <= 99)
+            {
+                SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
+            }
+            else
+            {
+                SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
+            }
+
+            if (LapTimeManager.MinuteCount <= 99)
+            {
+                MinuteDisplay.GetComponent<Text>().text = "0" + LapTimeManager.MinuteCount + "'";
+            }
+            else
+            {
+                MinuteDisplay.GetComponent<Text>().text = "" + LapTimeManager.MinuteCount + "'";
+            }
+
+            if (LapTimeManager.MilliCount <= 9)
+            {
+                MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCount.ToString("F0") + "";
+            }
+            else
+            {
+                MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliDisplay + "";
+            }
+
+            if (LapTimeManager.MilliCountX <= 99)
+            {
+                MilliXDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCountX.ToString("F0") + "";
+            }
+            else
+            {
+                MilliXDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCountX + "";
+            }
         }
 
-        if (LapTimeManager.MinuteCount <= 99)
-        {
-            MinuteDisplay.GetComponent<Text>().text = "0" + LapTimeManager.MinuteCount + "'";
-        }
-        else
-        {
-            MinuteDisplay.GetComponent<Text>().text = "" + LapTimeManager.MinuteCount + "'";
-        }
-
-
-
-        if (LapTimeManager.MilliCount <= 9)
-        {
-            MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCount.ToString("F0") + "";
-        }
-        else
-        {
-            MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliDisplay + "";
-        }
-
-
-
-
-        if (LapTimeManager.MilliCountX <= 99)
-        {
-            MilliXDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCountX.ToString("F0") + "";
-        }
-        else
-        {
-            MilliXDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCountX + "";
-        }
+        PlayerPrefs.SetInt("MinSave", LapTimeManager.MinuteCount);
+        PlayerPrefs.SetInt("SecSave", LapTimeManager.SecondCount);
+        PlayerPrefs.SetFloat("MilliSave", LapTimeManager.MilliCount);
+        PlayerPrefs.SetFloat("MilliXSave", LapTimeManager.MilliCountX);
+        PlayerPrefs.SetFloat("RawTime", LapTimeManager.RawTime);
 
         LapTimeManager.MinuteCount = 0;
         LapTimeManager.SecondCount = 0;
         LapTimeManager.MilliCount = 0;
         LapTimeManager.MilliCountX = 0;
+
+        LapTimeManager.RawTime = 0;
 
         HalfLapTrig.SetActive(true);
         LapCompleteTrig.SetActive(false);

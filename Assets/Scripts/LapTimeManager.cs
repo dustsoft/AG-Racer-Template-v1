@@ -18,10 +18,13 @@ public class LapTimeManager : MonoBehaviour
     public GameObject MilliBox;
     public GameObject MilliXBox;
 
+    public static float RawTime;
+
 
     void Update()
     {
         MilliCount += Time.deltaTime * 10;
+        RawTime += Time.deltaTime;
         MilliDisplay = MilliCount.ToString("F0");
         MinuteBox.GetComponent<Text>().text = "" + MilliDisplay;
 
