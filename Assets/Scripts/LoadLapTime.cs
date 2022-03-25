@@ -24,13 +24,9 @@ public class LoadLapTime : MonoBehaviour
         MilliXCount = PlayerPrefs.GetFloat("MilliXSave");
 
         MinDisplay.GetComponent<Text>().text = "0" + MinCount + "'";
-        SecDisplay.GetComponent<Text>().text = "" + SecCount + "''";
+        SecDisplay.GetComponent<Text>().text = "0" + SecCount + "''";
         MilliDisplay.GetComponent<Text>().text = "" + MilliCount.ToString("F0");
         MilliXDisplay.GetComponent<Text>().text = "" + MilliXCount.ToString("F0");
-    }
 
-    void Update()
-    {
-        
     }
 }

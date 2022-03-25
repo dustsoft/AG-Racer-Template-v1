@@ -15,12 +15,14 @@ public class LapCompleteTrigger : MonoBehaviour
 
     public float RawTime;
 
+
+
     void OnTriggerEnter()
     {
         RawTime = PlayerPrefs.GetFloat("RawTime");
         if (LapTimeManager.RawTime <= RawTime)
         {
-            if (LapTimeManager.SecondCount <= 99)
+            if (LapTimeManager.SecondCount <= 9)
             {
                 SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
             }
@@ -29,13 +31,13 @@ public class LapCompleteTrigger : MonoBehaviour
                 SecondDisplay.GetComponent<Text>().text = "" + LapTimeManager.SecondCount + "''";
             }
 
-            if (LapTimeManager.MinuteCount <= 99)
+            if (LapTimeManager.MinuteCount <= 9)
             {
                 MinuteDisplay.GetComponent<Text>().text = "0" + LapTimeManager.MinuteCount + "'";
             }
             else
             {
-                MinuteDisplay.GetComponent<Text>().text = "" + LapTimeManager.MinuteCount + "'";
+                MinuteDisplay.GetComponent<Text>().text = "0" + LapTimeManager.MinuteCount + "'";
             }
 
             if (LapTimeManager.MilliCount <= 9)
@@ -47,7 +49,7 @@ public class LapCompleteTrigger : MonoBehaviour
                 MilliDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliDisplay + "";
             }
 
-            if (LapTimeManager.MilliCountX <= 99)
+            if (LapTimeManager.MilliCountX <= 9)
             {
                 MilliXDisplay.GetComponent<Text>().text = "" + LapTimeManager.MilliCountX.ToString("F0") + "";
             }

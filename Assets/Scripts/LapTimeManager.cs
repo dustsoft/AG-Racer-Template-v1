@@ -28,17 +28,17 @@ public class LapTimeManager : MonoBehaviour
         MilliDisplay = MilliCount.ToString("F0");
         MinuteBox.GetComponent<Text>().text = "" + MilliDisplay;
 
+        LapTimeManager.RawTime = 0;
+
         if (MilliCount >= 10)
         {
             MilliCount -= 10;
             SecondCount += 1;
         }
 
-        //I'm not sure what this does, found this code on YouTube
         MilliDisplay = Mathf.Floor(MilliCount).ToString("F0");
         MilliBox.GetComponent<Text>().text = "" + MilliDisplay;
 
-        //X Display
         MilliCountX += Time.deltaTime * 100;
         MilliDisplayX = MilliCountX.ToString("F0");
 
@@ -49,7 +49,6 @@ public class LapTimeManager : MonoBehaviour
 
         MilliDisplayX = Mathf.Floor(MilliCountX).ToString("F0");
         MilliXBox.GetComponent<Text>().text = "" + MilliDisplayX;
-        //End X Display
 
 
         if (SecondCount <= 9)
@@ -75,6 +74,7 @@ public class LapTimeManager : MonoBehaviour
         {
             MinuteBox.GetComponent<Text>().text = "" + MinuteCount + "'";
         }
+
     }
 
 
