@@ -72,6 +72,8 @@ public class LapCompleteTrigger : MonoBehaviour
 
         LapTimeManager.RawTime = 0;
 
+        PlayerPrefs.DeleteAll();
+
         HalfLapTrig.SetActive(true);
         LapCompleteTrig.SetActive(false);
 

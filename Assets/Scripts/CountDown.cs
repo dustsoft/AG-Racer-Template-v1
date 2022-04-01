@@ -12,6 +12,7 @@ public class CountDown : MonoBehaviour
 
     void Start()
     {
+
         StartCoroutine(CountStart());
     }
 
@@ -35,6 +36,8 @@ public class CountDown : MonoBehaviour
         countDown.SetActive(false);
         countDown.GetComponent<Text>().text = "GO!";
         countDown.SetActive(true);
+
+        PlayerPrefs.DeleteAll();
 
         //Start Timer
         Laptimer.SetActive (true); // set's laptimer UI to ACTIVE!
